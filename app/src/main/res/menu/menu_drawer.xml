@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/drawer_films"
+        android:title="Фільми" />
+
+    <item
+        android:id="@+id/drawer_favorites"
+        android:title="Уподобання" />
+
+    <item
+        android:id="@+id/drawer_ratings"
+        android:title="Оцінки" />
+
+</menu>
+
