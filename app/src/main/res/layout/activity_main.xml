@@ -6,12 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Drawer -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Toolbar -->
         <include
             android:id="@+id/appBarMain"
             layout="@layout/app_bar_main"
@@ -19,9 +17,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- NavHost -->
-
-        <!-- Bottom Nav -->
         <fragment
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"

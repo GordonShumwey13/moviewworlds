@@ -16,4 +16,8 @@
         android:id="@+id/ratingsFragment"
         android:name="com.example.movieworld.ui.ratings.RatingsFragment"/>
 
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.movieworld.ui.help.HelpFragment" />
+
 </navigation>

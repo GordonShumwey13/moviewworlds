@@ -27,24 +27,22 @@ class MainActivity : AppCompatActivity() {
         val drawer = binding.drawerLayout
         val navController = findNavController(R.id.nav_host_fragment)
 
-        // Top-level destinations
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.filmsFragment,
                 R.id.favoritesFragment,
-                R.id.ratingsFragment     // Додаємо, щоб бургер був завжди
+                R.id.ratingsFragment,
+                R.id.helpFragment
             ),
             drawer
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        // ❗ Додаємо автоматичне оновлення title
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.appBarMain.toolbar.title = destination.label
         }
 
-        // Bottom Navigation
         binding.bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_films -> navController.navigate(R.id.filmsFragment)
@@ -53,12 +51,12 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        // Drawer Navigation
         binding.navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.drawer_films -> navController.navigate(R.id.filmsFragment)
                 R.id.drawer_favorites -> navController.navigate(R.id.favoritesFragment)
                 R.id.drawer_ratings -> navController.navigate(R.id.ratingsFragment)
+                R.id.drawer_help -> navController.navigate(R.id.helpFragment)
             }
             drawer.closeDrawer(GravityCompat.START)
             true
@@ -73,10 +71,17 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return when (item.itemId) {
+
             R.id.toolbar_ratings -> {
                 navController.navigate(R.id.ratingsFragment)
                 true
             }
+
+            R.id.toolbar_help -> {
+                navController.navigate(R.id.helpFragment)
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

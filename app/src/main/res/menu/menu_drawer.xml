@@ -13,5 +13,9 @@
         android:id="@+id/drawer_ratings"
         android:title="Оцінки" />
 
+    <item
+        android:id="@+id/drawer_help"
+        android:title="Допомога" />
+
 </menu>
 
