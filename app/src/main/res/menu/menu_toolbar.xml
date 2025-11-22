@@ -8,4 +8,10 @@
         android:icon="@android:drawable/btn_star_big_on"
         app:showAsAction="ifRoom|withText"/>
 
+    <item
+        android:id="@+id/toolbar_help"
+        android:title="Допомога"
+        android:icon="@android:drawable/ic_menu_help"
+        app:showAsAction="ifRoom|withText" />
+
 </menu>
